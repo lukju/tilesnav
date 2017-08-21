@@ -1,0 +1,11 @@
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\bin\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.deps.json
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\bin\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.runtimeconfig.json
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\bin\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.runtimeconfig.dev.json
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\bin\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.dll
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\bin\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.pdb
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.csproj.CoreCompileInputs.cache
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.AssemblyInfoInputs.cache
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.AssemblyInfo.cs
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.dll
+G:\DEV\tilesnav\TilesNav.AureliaFrontend\obj\Debug\netcoreapp2.0\TilesNav.AureliaFrontend.pdb

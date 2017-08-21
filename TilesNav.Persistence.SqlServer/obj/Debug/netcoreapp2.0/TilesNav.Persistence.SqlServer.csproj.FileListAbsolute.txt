@@ -1,0 +1,11 @@
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.csproj.CoreCompileInputs.cache
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.AssemblyInfoInputs.cache
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.AssemblyInfo.cs
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.deps.json
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.dll
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.pdb
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Model.dll
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.dll
+G:\DEV\tilesnav\TilesNav.Persistence.SqlServer\obj\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.pdb

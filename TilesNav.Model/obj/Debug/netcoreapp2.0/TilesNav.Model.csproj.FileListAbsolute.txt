@@ -1,0 +1,9 @@
+G:\DEV\tilesnav\TilesNav.Model\bin\Debug\netcoreapp2.0\TilesNav.Model.deps.json
+G:\DEV\tilesnav\TilesNav.Model\bin\Debug\netcoreapp2.0\TilesNav.Model.dll
+G:\DEV\tilesnav\TilesNav.Model\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.csproj.CoreCompileInputs.cache
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.AssemblyInfoInputs.cache
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.AssemblyInfo.cs
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.dll
+G:\DEV\tilesnav\TilesNav.Model\obj\Debug\netcoreapp2.0\TilesNav.Model.pdb
