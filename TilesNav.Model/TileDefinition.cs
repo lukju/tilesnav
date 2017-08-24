@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TilesNav.Model
 {
-    public class TileDefinition
+    public class TileDefinition: AbstractTilesNavBaseType
     {
-        public int ID { get; set; }
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }
@@ -17,7 +16,6 @@ namespace TilesNav.Model
         public string Color { get; set; }
         [Required]
         public int DatasourceId { get; set; }
-        [Required]
         public TileDatasource Datasource { get; set; }
         [Required]
         public int RendererId { get; set; }

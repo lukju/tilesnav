@@ -12,8 +12,8 @@ namespace TilesNav.Api.Controllers
     [Route("api/[controller]")]
     public class TileDefinitionsController : Controller
     {
-        readonly ITileDefinitionRepository _repo;
-        public TileDefinitionsController(ITileDefinitionRepository repo)
+        readonly ITilesNavRepository<TileDefinition> _repo;
+        public TileDefinitionsController(ITilesNavRepository<TileDefinition> repo)
         {
             _repo = repo;
         }
@@ -65,12 +65,18 @@ namespace TilesNav.Api.Controllers
             {
                 return BadRequest("Invalid payload");
             }
-            var result = _repo.Update(tile);
-            if (result == null)
+            try
             {
-                return BadRequest("No such TileDefinition found");
+                var result = _repo.Update(tile);
+                if (result == null)
+                {
+                    return BadRequest("No such TileDefinition found");
+                }
+                return Ok(tile);
+            } catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
-            return Ok(tile);
         }
     }
 }

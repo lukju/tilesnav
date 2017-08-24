@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using TilesNav.Persistence.SqlServer;
 using TilesNav.Model.Repos;
+using TilesNav.Model;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -17,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 options.UseSqlServer(connectionString);
             });
 
-            services.AddScoped<ITileDefinitionRepository, TileDefinitionRepository>();
+            services.AddScoped<ITilesNavRepository<TileDefinition>, TilesNavRepository<TileDefinition>>();
         }
     }
 }

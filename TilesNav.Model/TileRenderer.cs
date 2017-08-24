@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TilesNav.Model
 {
-    public class TileRenderer
+    public class TileRenderer: AbstractTilesNavBaseType
     {
-        public int ID { get; set; }
         [Required]
         public Guid Secret { get; set; }
         [Required]

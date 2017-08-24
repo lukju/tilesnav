@@ -4,9 +4,8 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 namespace TilesNav.Model
 {
-    public class TilesView
+    public class TilesView: AbstractTilesNavBaseType
     {
-        public int ID { get; set; }
         public List<TilesViewContainer> Containers { get; set; }
     }
 }
