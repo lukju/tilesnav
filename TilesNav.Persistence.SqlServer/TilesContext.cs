@@ -12,7 +12,9 @@ namespace TilesNav.Persistence.SqlServer
 
         public DbSet<TileDefinition> TileDefinitions { get; set; }
 
-        public DbSet<TilesView> TilesViews { get; set; }
+        public DbSet<PersonalTilesView> PersonalTilesViews { get; set; }
+
+        public DbSet<DefaultTilesView> DefaultTilesViews { get; set; }
     }
     
 }

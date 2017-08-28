@@ -11,7 +11,7 @@ using TilesNav.Persistence.SqlServer;
 namespace TilesNav.Persistence.SqlServer.Migrations
 {
     [DbContext(typeof(TilesContext))]
-    [Migration("20170824182259_Init")]
+    [Migration("20170824203522_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

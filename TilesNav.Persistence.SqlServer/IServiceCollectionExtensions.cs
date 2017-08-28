@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using TilesNav.Persistence.SqlServer;
-using TilesNav.Model.Repos;
 using TilesNav.Model;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -19,6 +18,8 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
             services.AddScoped<ITilesNavRepository<TileDefinition>, TilesNavRepository<TileDefinition>>();
+            services.AddScoped<ITilesNavRepository<PersonalTilesView>, TilesNavRepository<PersonalTilesView>>();
+            services.AddScoped<ITilesNavRepository<DefaultTilesView>, TilesNavRepository<DefaultTilesView>>();
         }
     }
 }

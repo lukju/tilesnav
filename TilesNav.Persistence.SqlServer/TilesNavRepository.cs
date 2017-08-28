@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using TilesNav.Model;
-using TilesNav.Model.Repos;
 
 namespace TilesNav.Persistence.SqlServer
 {
@@ -16,6 +16,7 @@ namespace TilesNav.Persistence.SqlServer
         }
         public T Create(T entity)
         {
+            entity.Modified = DateTime.Now;
             EntityEntry<T> added = _ctx.Set<T>().Add(entity);
             _ctx.SaveChanges();
             return added.Entity;
@@ -37,13 +38,19 @@ namespace TilesNav.Persistence.SqlServer
             return result;
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-            return _ctx.Set<T>();
+            IQueryable<T> query = _ctx.Set<T>();
+            if (filter != null)
+            {
+                query.Where(filter);
+            }
+            return query;
         }
 
         public T Update(T entity)
         {
+            entity.Modified = DateTime.Now;
             EntityEntry<T> updated = _ctx.Update(entity);
             _ctx.SaveChanges();
             return updated.Entity;

@@ -30,6 +30,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
                     b.Property<string>("Endpoint")
                         .IsRequired();
 
+                    b.Property<DateTime>("Modified");
+
                     b.Property<string>("Name")
                         .IsRequired();
 
@@ -55,6 +57,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
                     b.Property<string>("Icon")
                         .IsRequired();
 
+                    b.Property<DateTime>("Modified");
+
                     b.Property<int>("RendererId");
 
                     b.Property<string>("Title")
@@ -76,6 +80,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<DateTime>("Modified");
+
                     b.Property<Guid>("Secret");
 
                     b.Property<string>("Title")
@@ -91,6 +97,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("Modified");
+
                     b.HasKey("ID");
 
                     b.ToTable("TilesViews");
@@ -100,6 +108,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Modified");
 
                     b.Property<int?>("TilesViewID");
 
@@ -118,6 +128,8 @@ namespace TilesNav.Persistence.SqlServer.Migrations
                     b.Property<int>("DefinitionID");
 
                     b.Property<int>("Height");
+
+                    b.Property<DateTime>("Modified");
 
                     b.Property<int?>("TilesViewContainerID");
 

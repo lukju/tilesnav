@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TilesNav.Model.Repos;
 using TilesNav.Model;
 
 namespace TilesNav.Api.Controllers
@@ -58,8 +57,8 @@ namespace TilesNav.Api.Controllers
             return NoContent();
         }
 
-        [HttpPut]
-        public IActionResult Update([FromBody] TileDefinition tile)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] TileDefinition tile)
         {
             if (!ModelState.IsValid)
             {
@@ -67,16 +66,24 @@ namespace TilesNav.Api.Controllers
             }
             try
             {
+                tile.ID = id;
                 var result = _repo.Update(tile);
                 if (result == null)
                 {
                     return BadRequest("No such TileDefinition found");
                 }
                 return Ok(tile);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpPut]
+        public IActionResult Update([FromBody] TileDefinition tile)
+        {
+            return Update(tile.ID, tile);
         }
     }
 }

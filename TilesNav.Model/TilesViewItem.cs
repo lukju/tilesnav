@@ -7,9 +7,9 @@ namespace TilesNav.Model
 {
     public class TilesViewItem: AbstractTilesNavBaseType
     {
-        public int DefinitionID { get; set; }
         [Required]
-        public TileDefinition Definition { get; set; }
+        public int DefinitionID { get; set; }
+        public string ItemSpecificConfig { get; set; }
         [Required]
         public int X { get; set; }
         [Required]
