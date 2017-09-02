@@ -10,6 +10,7 @@ namespace TilesNav.Persistence.SqlServer
     class TilesNavRepository<T> : ITilesNavRepository<T> where T: AbstractTilesNavBaseType
     {
         private readonly TilesContext _ctx;
+
         public TilesNavRepository(TilesContext ctx)
         {
             _ctx = ctx;

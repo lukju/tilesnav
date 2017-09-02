@@ -43,7 +43,6 @@ namespace TilesNav.Api.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] PersonalTilesView tilesView)
         {
-            tilesView.Owner = "bla";
             return CreateOrUpdate(tilesView);
         }
 
@@ -51,7 +50,6 @@ namespace TilesNav.Api.Controllers
         public IActionResult Update(int id, [FromBody] PersonalTilesView tilesView)
         {
             tilesView.ID = id;
-            tilesView.Owner = "bla";
             return CreateOrUpdate(tilesView);
         }
 

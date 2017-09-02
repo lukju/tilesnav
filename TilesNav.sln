@@ -18,6 +18,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TilesNav.Model", "TilesNav.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TilesNav.Core", "TilesNav.Core\TilesNav.Core.csproj", "{EAAF83DF-A4D6-41D1-B6CD-2BCC7B02AC78}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{BC2A5548-0F6C-43E1-9E08-305B7C73981E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesNav.Core.Test", "TilesNav.Core.Test\TilesNav.Core.Test.csproj", "{0F8E9B87-5375-4287-815B-CF46A065C0F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,9 +48,16 @@ Global
 		{EAAF83DF-A4D6-41D1-B6CD-2BCC7B02AC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAAF83DF-A4D6-41D1-B6CD-2BCC7B02AC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAAF83DF-A4D6-41D1-B6CD-2BCC7B02AC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8E9B87-5375-4287-815B-CF46A065C0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8E9B87-5375-4287-815B-CF46A065C0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8E9B87-5375-4287-815B-CF46A065C0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8E9B87-5375-4287-815B-CF46A065C0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F8E9B87-5375-4287-815B-CF46A065C0F4} = {BC2A5548-0F6C-43E1-9E08-305B7C73981E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E44DC34-A853-4564-85ED-CE88388C3F80}

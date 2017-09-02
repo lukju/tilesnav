@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using TilesNav.Model;
 
 namespace TilesNav.Api
 {
@@ -31,6 +32,8 @@ namespace TilesNav.Api
             services.AddMvc();
 
             services.ConfigureTilesNavWithSqlServer();
+
+            services.AddTransient<IUser, DummyUserImplementation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,5 +44,10 @@ namespace TilesNav.Api
 
             app.UseMvc();
         }
+    }
+
+    class DummyUserImplementation : IUser
+    {
+        public string AccountName => "bla";
     }
 }
