@@ -8,11 +8,11 @@ namespace TilesNav.Core
 {
     public class TilesViewManager : ITilesViewManager
     {
-        readonly ITilesNavRepository<PersonalTilesView> _personalViewsRepo;
-        readonly ITilesNavRepository<DefaultTilesView> _defaultViewsRepo;
+        readonly ITilesNavRepository<PersonalTilesView, int> _personalViewsRepo;
+        readonly ITilesNavRepository<DefaultTilesView, int> _defaultViewsRepo;
         readonly IUser _currentUser;
 
-        public TilesViewManager(IUser currentUser, ITilesNavRepository<PersonalTilesView> personalViewsRepo, ITilesNavRepository<DefaultTilesView> defaultViewsRepo)
+        public TilesViewManager(IUser currentUser, ITilesNavRepository<PersonalTilesView, int> personalViewsRepo, ITilesNavRepository<DefaultTilesView, int> defaultViewsRepo)
         {
             _personalViewsRepo = personalViewsRepo;
             _defaultViewsRepo = defaultViewsRepo;

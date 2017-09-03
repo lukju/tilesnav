@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using TilesNav.Persistence.SqlServer;
 using TilesNav.Model;
 using TilesNav.Persistence.Interfaces;
@@ -16,9 +17,9 @@ namespace TilesNav.Persistence.SqlServer
                 options.UseSqlServer(connectionString);
             });
 
-            services.AddScoped<ITilesNavRepository<TileDefinition>, TilesNavRepository<TileDefinition>>();
-            services.AddScoped<ITilesNavRepository<PersonalTilesView>, TilesNavRepository<PersonalTilesView>>();
-            services.AddScoped<ITilesNavRepository<DefaultTilesView>, TilesNavRepository<DefaultTilesView>>();
+            services.AddScoped<ITilesNavRepository<TileDefinition, Guid>, TilesNavRepository<TileDefinition, Guid>>();
+            services.AddScoped<ITilesNavRepository<PersonalTilesView, int>, TilesNavRepository<PersonalTilesView, int>>();
+            services.AddScoped<ITilesNavRepository<DefaultTilesView, int>, TilesNavRepository<DefaultTilesView, int>>();
         }
     }
 }

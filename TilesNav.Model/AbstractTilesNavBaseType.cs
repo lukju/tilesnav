@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TilesNav.Model
 {
-    public abstract class AbstractTilesNavBaseType
+    public abstract class AbstractTilesNavBaseType<T_ID>
     {
-        public int ID { get; set; }
+        public T_ID ID { get; set; }
 
         public DateTime Modified { get; set; }
     }

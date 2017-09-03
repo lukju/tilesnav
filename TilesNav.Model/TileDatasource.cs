@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TilesNav.Model
 {
-    public class TileDatasource: AbstractTilesNavBaseType
+    public class TileDatasource: AbstractTilesNavBaseType<int>
     {
         [Required]
         public Guid Secret { get; set; }

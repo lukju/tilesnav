@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TilesNav.Model
 {
-    public class TilesViewContainer: AbstractTilesNavBaseType
+    public class TilesViewContainer: AbstractTilesNavBaseType<int>
     {
         public string Title { get; set; }
 

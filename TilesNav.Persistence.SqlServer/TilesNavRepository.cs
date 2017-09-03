@@ -8,7 +8,7 @@ using TilesNav.Persistence.Interfaces;
 
 namespace TilesNav.Persistence.SqlServer
 {
-    class TilesNavRepository<T> : ITilesNavRepository<T> where T: AbstractTilesNavBaseType
+    class TilesNavRepository<TEntity, TID> : ITilesNavRepository<TEntity, TID> where TEntity: AbstractTilesNavBaseType<TID>
     {
         private readonly TilesContext _ctx;
 
@@ -16,33 +16,33 @@ namespace TilesNav.Persistence.SqlServer
         {
             _ctx = ctx;
         }
-        public T Create(T entity)
+        public TEntity Create(TEntity entity)
         {
             entity.Modified = DateTime.Now;
-            EntityEntry<T> added = _ctx.Set<T>().Add(entity);
+            EntityEntry<TEntity> added = _ctx.Set<TEntity>().Add(entity);
             _ctx.SaveChanges();
             return added.Entity;
         }
 
-        public T Delete(int id)
+        public TEntity Delete(TID id)
         {
-            T toDelete = Get(id);
-            EntityEntry<T> deleted = _ctx.Remove(toDelete);
+            TEntity toDelete = Get(id);
+            EntityEntry<TEntity> deleted = _ctx.Remove(toDelete);
             _ctx.SaveChanges();
             return deleted.Entity;
         }
 
-        public T Get(int id)
+        public TEntity Get(TID id)
         {
-            var result = (from t in _ctx.Set<T>() where t.ID == id select t)
+            var result = (from t in _ctx.Set<TEntity>() where t.ID.Equals(id) select t)
                 .FirstOrDefault();
             
             return result;
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null)
+        public IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            IQueryable<T> query = _ctx.Set<T>();
+            IQueryable<TEntity> query = _ctx.Set<TEntity>();
             if (filter != null)
             {
                 query.Where(filter);
@@ -50,10 +50,10 @@ namespace TilesNav.Persistence.SqlServer
             return query;
         }
 
-        public T Update(T entity)
+        public TEntity Update(TEntity entity)
         {
             entity.Modified = DateTime.Now;
-            EntityEntry<T> updated = _ctx.Update(entity);
+            EntityEntry<TEntity> updated = _ctx.Update(entity);
             _ctx.SaveChanges();
             return updated.Entity;
         }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TilesNav.Model
 {
-    public class TileDefinition: AbstractTilesNavBaseType
+    public class TileDefinition: AbstractTilesNavBaseType<Guid>
     {
         [Required]
         public string Title { get; set; }

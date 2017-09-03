@@ -5,12 +5,12 @@ using TilesNav.Model;
 
 namespace TilesNav.Persistence.Interfaces
 {
-    public interface ITilesNavRepository<T> where T: AbstractTilesNavBaseType
+    public interface ITilesNavRepository<TEntity, TID> where TEntity: AbstractTilesNavBaseType<TID>
     {
-        IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null);
-        T Create(T entity);
-        T Get(int id);
-        T Update(T entity);
-        T Delete(int id);
+        IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null);
+        TEntity Create(TEntity entity);
+        TEntity Get(TID id);
+        TEntity Update(TEntity entity);
+        TEntity Delete(TID id);
     }
 }

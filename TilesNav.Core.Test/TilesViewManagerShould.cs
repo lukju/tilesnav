@@ -132,8 +132,8 @@ namespace TilesNav.Core.Test
         {
             get
             {
-                var personalViewsRepo = new FakeTilesNavRepository<PersonalTilesView>();
-                var defaultViewsRepo = new FakeTilesNavRepository<DefaultTilesView>();
+                var personalViewsRepo = new FakeTilesNavRepositoryWithIntId<PersonalTilesView>();
+                var defaultViewsRepo = new FakeTilesNavRepositoryWithIntId<DefaultTilesView>();
                 var currentUser = new FakeUser("fake_user");
                 return new TilesViewManager(currentUser, personalViewsRepo, defaultViewsRepo);
             }

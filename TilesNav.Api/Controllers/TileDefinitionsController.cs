@@ -26,7 +26,7 @@ namespace TilesNav.Api.Controllers
         }
 
         [HttpGet("{id}", Name = nameof(GetById))]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(Guid id)
         {
             var tile = _tilesMgr.GetDefinition(id);
             if (tile == null)
@@ -48,7 +48,7 @@ namespace TilesNav.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             var deletedTile = _tilesMgr.DeleteDefinition(id);
             if (deletedTile == null)
@@ -59,7 +59,7 @@ namespace TilesNav.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] TileDefinition tile)
+        public IActionResult Update(Guid id, [FromBody] TileDefinition tile)
         {
             if (!ModelState.IsValid)
             {

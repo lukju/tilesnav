@@ -8,8 +8,8 @@ namespace TilesNav.Core.Interfaces
     public interface ITileDefinitionManager
     {
         TileDefinition SaveDefinition(TileDefinition td);
-        TileDefinition DeleteDefinition(int id);
-        TileDefinition GetDefinition(int id);
+        TileDefinition DeleteDefinition(Guid id);
+        TileDefinition GetDefinition(Guid id);
         IEnumerable<TileDefinition> GetAll();
 
     }
