@@ -1663,13 +1663,28 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "TilesNav.Model": "1.0.0"
+          "TilesNav.Core.Interfaces": "1.0.0",
+          "TilesNav.Model": "1.0.0",
+          "TilesNav.Persistence.Interfaces": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TilesNav.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/TilesNav.Core.dll": {}
+        }
+      },
+      "TilesNav.Core.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TilesNav.Core.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TilesNav.Core.Interfaces.dll": {}
         }
       },
       "TilesNav.Model/1.0.0": {
@@ -1683,6 +1698,19 @@
         },
         "runtime": {
           "bin/placeholder/TilesNav.Model.dll": {}
+        }
+      },
+      "TilesNav.Persistence.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TilesNav.Persistence.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TilesNav.Persistence.Interfaces.dll": {}
         }
       }
     }
@@ -5665,10 +5693,20 @@
       "path": "../TilesNav.Core/TilesNav.Core.csproj",
       "msbuildProject": "../TilesNav.Core/TilesNav.Core.csproj"
     },
+    "TilesNav.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../TilesNav.Core.Interfaces/TilesNav.Core.Interfaces.csproj",
+      "msbuildProject": "../TilesNav.Core.Interfaces/TilesNav.Core.Interfaces.csproj"
+    },
     "TilesNav.Model/1.0.0": {
       "type": "project",
       "path": "../TilesNav.Model/TilesNav.Model.csproj",
       "msbuildProject": "../TilesNav.Model/TilesNav.Model.csproj"
+    },
+    "TilesNav.Persistence.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../TilesNav.Persistence.Interfaces/TilesNav.Persistence.Interfaces.csproj",
+      "msbuildProject": "../TilesNav.Persistence.Interfaces/TilesNav.Persistence.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5677,6 +5715,7 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "TilesNav.Core >= 1.0.0",
       "TilesNav.Model >= 1.0.0",
+      "TilesNav.Persistence.Interfaces >= 1.0.0",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
     ]
@@ -5714,6 +5753,9 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "G:\\DEV\\tilesnav\\TilesNav.Persistence.Interfaces\\TilesNav.Persistence.Interfaces.csproj": {
+              "projectPath": "G:\\DEV\\tilesnav\\TilesNav.Persistence.Interfaces\\TilesNav.Persistence.Interfaces.csproj"
+            },
             "G:\\DEV\\tilesnav\\TilesNav.Core\\TilesNav.Core.csproj": {
               "projectPath": "G:\\DEV\\tilesnav\\TilesNav.Core\\TilesNav.Core.csproj"
             },

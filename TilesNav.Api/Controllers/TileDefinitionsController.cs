@@ -5,29 +5,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TilesNav.Model;
+using TilesNav.Core.Interfaces;
 
 namespace TilesNav.Api.Controllers
 {
     [Route("api/[controller]")]
     public class TileDefinitionsController : Controller
     {
-        readonly ITilesNavRepository<TileDefinition> _repo;
-        public TileDefinitionsController(ITilesNavRepository<TileDefinition> repo)
+        private readonly ITileDefinitionManager _tilesMgr;
+        public TileDefinitionsController(ITileDefinitionManager tilesMgr)
         {
-            _repo = repo;
+            _tilesMgr = tilesMgr;
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
-            var tiles = _repo.GetAll();
+            var tiles = _tilesMgr.GetAll();
             return Ok(tiles);
         }
 
         [HttpGet("{id}", Name = nameof(GetById))]
         public IActionResult GetById(int id)
         {
-            var tile = _repo.Get(id);
+            var tile = _tilesMgr.GetDefinition(id);
             if (tile == null)
             {
                 return NotFound();
@@ -42,14 +43,14 @@ namespace TilesNav.Api.Controllers
             {
                 return BadRequest();
             }
-            var newTile = _repo.Create(tile);
+            var newTile = _tilesMgr.SaveDefinition(tile);
             return CreatedAtRoute(nameof(GetById), new { id = newTile.ID }, newTile);
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var deletedTile = _repo.Delete(id);
+            var deletedTile = _tilesMgr.DeleteDefinition(id);
             if (deletedTile == null)
             {
                 return BadRequest("No such TileDefinition found");
@@ -67,7 +68,7 @@ namespace TilesNav.Api.Controllers
             try
             {
                 tile.ID = id;
-                var result = _repo.Update(tile);
+                var result = _tilesMgr.SaveDefinition(tile);
                 if (result == null)
                 {
                     return BadRequest("No such TileDefinition found");

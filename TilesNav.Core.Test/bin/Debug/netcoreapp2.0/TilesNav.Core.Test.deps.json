@@ -11,6 +11,7 @@
           "Microsoft.NET.Test.Sdk": "15.3.0-preview-20170628-02",
           "TilesNav.Core": "1.0.0",
           "TilesNav.Model": "1.0.0",
+          "TilesNav.Persistence.Interfaces": "1.0.0",
           "xunit": "2.2.0",
           "xunit.runner.visualstudio": "2.2.0"
         },
@@ -1019,10 +1020,20 @@
       },
       "TilesNav.Core/1.0.0": {
         "dependencies": {
-          "TilesNav.Model": "1.0.0"
+          "TilesNav.Core.Interfaces": "1.0.0",
+          "TilesNav.Model": "1.0.0",
+          "TilesNav.Persistence.Interfaces": "1.0.0"
         },
         "runtime": {
           "TilesNav.Core.dll": {}
+        }
+      },
+      "TilesNav.Core.Interfaces/1.0.0": {
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "runtime": {
+          "TilesNav.Core.Interfaces.dll": {}
         }
       },
       "TilesNav.Model/1.0.0": {
@@ -1031,6 +1042,14 @@
         },
         "runtime": {
           "TilesNav.Model.dll": {}
+        }
+      },
+      "TilesNav.Persistence.Interfaces/1.0.0": {
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "runtime": {
+          "TilesNav.Persistence.Interfaces.dll": {}
         }
       }
     }
@@ -1578,7 +1597,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "TilesNav.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "TilesNav.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TilesNav.Persistence.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

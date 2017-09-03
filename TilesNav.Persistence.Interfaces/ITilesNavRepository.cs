@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
+using TilesNav.Model;
 
-namespace TilesNav.Model
+namespace TilesNav.Persistence.Interfaces
 {
     public interface ITilesNavRepository<T> where T: AbstractTilesNavBaseType
     {

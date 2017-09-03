@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TilesNav.Model;
 using TilesNav.Core;
+using TilesNav.Core.Interfaces;
 
 namespace TilesNav.Api.Controllers
 {

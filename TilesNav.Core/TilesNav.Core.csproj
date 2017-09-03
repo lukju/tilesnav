@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TilesNav.Core.Interfaces\TilesNav.Core.Interfaces.csproj" />
     <ProjectReference Include="..\TilesNav.Model\TilesNav.Model.csproj" />
+    <ProjectReference Include="..\TilesNav.Persistence.Interfaces\TilesNav.Persistence.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

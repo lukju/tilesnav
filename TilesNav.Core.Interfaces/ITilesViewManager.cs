@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TilesNav.Model;
 
-namespace TilesNav.Core
+namespace TilesNav.Core.Interfaces
 {
     public interface ITilesViewManager
     {

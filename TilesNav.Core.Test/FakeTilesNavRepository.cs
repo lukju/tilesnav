@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using System.Linq;
 using System.Text;
 using TilesNav.Model;
+using TilesNav.Persistence.Interfaces;
 
 namespace TilesNav.Core.Test
 {

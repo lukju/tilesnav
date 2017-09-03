@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore.Design": "2.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "TilesNav.Model": "1.0.0"
+          "TilesNav.Model": "1.0.0",
+          "TilesNav.Persistence.Interfaces": "1.0.0"
         },
         "runtime": {
           "TilesNav.Persistence.SqlServer.dll": {}
@@ -622,6 +623,14 @@
         "runtime": {
           "TilesNav.Model.dll": {}
         }
+      },
+      "TilesNav.Persistence.Interfaces/1.0.0": {
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "runtime": {
+          "TilesNav.Persistence.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -1115,6 +1124,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "TilesNav.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TilesNav.Persistence.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

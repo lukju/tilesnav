@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v2.0": {
       "TilesNav.Core/1.0.0": {
         "dependencies": {
-          "TilesNav.Model": "1.0.0"
+          "TilesNav.Core.Interfaces": "1.0.0",
+          "TilesNav.Model": "1.0.0",
+          "TilesNav.Persistence.Interfaces": "1.0.0"
         },
         "runtime": {
           "TilesNav.Core.dll": {}
@@ -387,12 +389,28 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "TilesNav.Core.Interfaces/1.0.0": {
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "runtime": {
+          "TilesNav.Core.Interfaces.dll": {}
+        }
+      },
       "TilesNav.Model/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
           "TilesNav.Model.dll": {}
+        }
+      },
+      "TilesNav.Persistence.Interfaces/1.0.0": {
+        "dependencies": {
+          "TilesNav.Model": "1.0.0"
+        },
+        "runtime": {
+          "TilesNav.Persistence.Interfaces.dll": {}
         }
       }
     }
@@ -690,7 +708,17 @@
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
+    "TilesNav.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "TilesNav.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TilesNav.Persistence.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -23,9 +23,9 @@
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TilesNav.Core\TilesNav.Core.csproj" />
+    <ProjectReference Include="..\TilesNav.Api.Composition\TilesNav.Api.Composition.csproj" />
+    <ProjectReference Include="..\TilesNav.Core.Interfaces\TilesNav.Core.Interfaces.csproj" />
     <ProjectReference Include="..\TilesNav.Model\TilesNav.Model.csproj" />
-    <ProjectReference Include="..\TilesNav.Persistence.SqlServer\TilesNav.Persistence.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>

@@ -16,3 +16,7 @@ G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Core.dll
 G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Model.dll
 G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Core.pdb
 G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
+G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Core.Test\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb

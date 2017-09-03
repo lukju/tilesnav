@@ -1,0 +1,11 @@
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.deps.json
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\bin\Debug\netcoreapp2.0\TilesNav.Model.dll
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.csproj.CoreCompileInputs.cache
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.AssemblyInfoInputs.cache
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.AssemblyInfo.cs
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core.Interfaces\obj\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb

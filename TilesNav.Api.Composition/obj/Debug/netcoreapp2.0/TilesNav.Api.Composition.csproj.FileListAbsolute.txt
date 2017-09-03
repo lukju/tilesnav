@@ -1,0 +1,15 @@
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.deps.json
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.csproj.CoreCompileInputs.cache
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.AssemblyInfoInputs.cache
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.AssemblyInfo.cs
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Model.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.pdb

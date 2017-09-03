@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TilesNav.Model\TilesNav.Model.csproj" />
+    <ProjectReference Include="..\TilesNav.Persistence.Interfaces\TilesNav.Persistence.Interfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TilesNav.Persistence.SqlServer;
 using TilesNav.Model;
+using TilesNav.Persistence.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace TilesNav.Persistence.SqlServer
 {
     public static class IServiceCollectionExtensions
     {

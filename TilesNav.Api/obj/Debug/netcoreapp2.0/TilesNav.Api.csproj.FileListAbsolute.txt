@@ -13,5 +13,9 @@ G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Model.pdb
 G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.pdb
 G:\DEV\tilesnav\TilesNav.Api\obj\Debug\netcoreapp2.0\TilesNav.Api.dll
 G:\DEV\tilesnav\TilesNav.Api\obj\Debug\netcoreapp2.0\TilesNav.Api.pdb
-G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.dll
-G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.pdb
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.dll
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.pdb
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.pdb

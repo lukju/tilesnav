@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using TilesNav.Model;
+using TilesNav.Persistence.Interfaces;
 
 namespace TilesNav.Persistence.SqlServer
 {

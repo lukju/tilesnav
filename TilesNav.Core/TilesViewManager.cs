@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using TilesNav.Model;
+using TilesNav.Persistence.Interfaces;
+using TilesNav.Core.Interfaces;
 
 namespace TilesNav.Core
 {

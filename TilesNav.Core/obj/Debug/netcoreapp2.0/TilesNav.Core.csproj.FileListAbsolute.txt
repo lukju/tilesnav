@@ -9,3 +9,7 @@ G:\DEV\tilesnav\TilesNav.Core\obj\Debug\netcoreapp2.0\TilesNav.Core.AssemblyInfo
 G:\DEV\tilesnav\TilesNav.Core\obj\Debug\netcoreapp2.0\TilesNav.Core.dll
 G:\DEV\tilesnav\TilesNav.Core\obj\Debug\netcoreapp2.0\TilesNav.Core.pdb
 G:\DEV\tilesnav\TilesNav.Core\obj\Debug\netcoreapp2.0\TilesNav.Core.csprojResolveAssemblyReference.cache
+G:\DEV\tilesnav\TilesNav.Core\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Core\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Core\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.pdb
