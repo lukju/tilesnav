@@ -6,15 +6,13 @@ using TilesNav.Persistence.Interfaces;
 
 namespace TilesNav.Core
 {
-    class TileDefinitionManager : ITileDefinitionManager
+    public class TileDefinitionManager : ITileDefinitionManager
     {
         readonly ITilesNavRepository<TileDefinition, Guid> _tileDefinitionRepo;
-        readonly IUser _currentUser;
 
-        public TileDefinitionManager(IUser currentUser, ITilesNavRepository<TileDefinition, Guid> tileDefinitionRepo)
+        public TileDefinitionManager(ITilesNavRepository<TileDefinition, Guid> tileDefinitionRepo)
         {
             _tileDefinitionRepo = tileDefinitionRepo;
-            _currentUser = currentUser;
         }
 
         public TileDefinition DeleteDefinition(Guid id)
@@ -36,6 +34,10 @@ namespace TilesNav.Core
         {
             if (td.ID != Guid.Empty)
             {
+                if (GetDefinition(td.ID) == null)
+                {
+                    throw new InvalidOperationException("definition does not exist");
+                }
                 return _tileDefinitionRepo.Update(td);
             } else
             {

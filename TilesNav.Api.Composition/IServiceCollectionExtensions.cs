@@ -6,6 +6,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static void ConfigureTilesNavServices(this IServiceCollection services)
         {
+            services.ConfigureTilesNavCore();
             services.ConfigureTilesNavWithSqlServer();
         }
     }

@@ -28,8 +28,6 @@ namespace TilesNav.Api
             services.AddMvc();
             
             services.ConfigureTilesNavServices();
-
-            services.AddTransient<IUser, DummyUserImplementation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,10 +38,5 @@ namespace TilesNav.Api
 
             app.UseMvc();
         }
-    }
-
-    class DummyUserImplementation : IUser
-    {
-        public string AccountName => "bla";
     }
 }

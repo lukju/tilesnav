@@ -15,10 +15,8 @@ namespace TilesNav.Model
         [Required]
         public string Color { get; set; }
         [Required]
-        public int DatasourceId { get; set; }
         public TileDatasource Datasource { get; set; }
         [Required]
-        public int RendererId { get; set; }
         public TileRenderer Renderer { get; set; }
     }
 }

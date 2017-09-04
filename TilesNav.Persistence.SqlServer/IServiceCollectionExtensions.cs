@@ -20,6 +20,7 @@ namespace TilesNav.Persistence.SqlServer
             services.AddScoped<ITilesNavRepository<TileDefinition, Guid>, TilesNavRepository<TileDefinition, Guid>>();
             services.AddScoped<ITilesNavRepository<PersonalTilesView, int>, TilesNavRepository<PersonalTilesView, int>>();
             services.AddScoped<ITilesNavRepository<DefaultTilesView, int>, TilesNavRepository<DefaultTilesView, int>>();
+            services.AddScoped<ITilesNavRepository<User, int>, TilesNavRepository<User, int>>();
         }
     }
 }

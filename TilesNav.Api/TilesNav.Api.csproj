@@ -23,9 +23,13 @@
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TilesNav.Api.Composition\TilesNav.Api.Composition.csproj" />
     <ProjectReference Include="..\TilesNav.Core.Interfaces\TilesNav.Core.Interfaces.csproj" />
     <ProjectReference Include="..\TilesNav.Model\TilesNav.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="TilesNav.Api.Composition">
+      <HintPath>..\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

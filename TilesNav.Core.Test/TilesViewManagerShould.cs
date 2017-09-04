@@ -49,7 +49,7 @@ namespace TilesNav.Core.Test
         }
 
         [Fact]
-        public void StorePersonalViewIfNewPersonalViewIsUpdated()
+        public void StorePersonalViewIfPersonalViewIsUpdated()
         {
             var tilesViewManager = TilesViewManager;
             var view = new PersonalTilesView()
@@ -62,6 +62,19 @@ namespace TilesNav.Core.Test
             Assert.NotNull(tilesViewManager.LoadPersonalView("viewername", false));
             var updatedView = tilesViewManager.SaveView(view);
             Assert.Equal(newView.ID, updatedView.ID);
+        }
+
+        [Fact]
+        public void ThrowIfInexistentPersonalViewGetUpdated()
+        {
+            var tilesViewManager = TilesViewManager;
+            var view = new PersonalTilesView()
+            {
+                ID = 1,
+                Viewer = "viewername",
+                Owner = new User("bla")
+            };
+            Assert.Throws<InvalidOperationException>(() => tilesViewManager.SaveView(view));
         }
 
         [Fact]
@@ -124,7 +137,7 @@ namespace TilesNav.Core.Test
                 Viewer = "viewername"
             };
             var newView = tilesViewManager.SaveView(view1);
-            ((PersonalTilesView)newView).Owner = view1.Owner + "_changed";
+            ((PersonalTilesView)newView).Owner = new User(view1.Owner.AccountName + "_changed");
             Assert.Throws<InvalidOperationException>(() => tilesViewManager.SaveView(newView));
         }
 
@@ -134,8 +147,8 @@ namespace TilesNav.Core.Test
             {
                 var personalViewsRepo = new FakeTilesNavRepositoryWithIntId<PersonalTilesView>();
                 var defaultViewsRepo = new FakeTilesNavRepositoryWithIntId<DefaultTilesView>();
-                var currentUser = new FakeUser("fake_user");
-                return new TilesViewManager(currentUser, personalViewsRepo, defaultViewsRepo);
+                var userMgr = new FakeUserManager();
+                return new TilesViewManager(userMgr, personalViewsRepo, defaultViewsRepo);
             }
         }
     }

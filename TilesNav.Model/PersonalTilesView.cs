@@ -6,6 +6,6 @@ namespace TilesNav.Model
 {
     public class PersonalTilesView: TilesView
     {
-        public string Owner { get; set; }
+        public User Owner { get; set; }
     }
 }

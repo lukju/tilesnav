@@ -5,15 +5,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TilesNav.Model
 {
-    public class TilesViewItem: AbstractTilesNavBaseType<int>
+    public class TilesViewItem
     {
         [Required]
-        public int DefinitionID { get; set; }
+        public TileDefinition Definition { get; set; }
         public string ItemSpecificConfig { get; set; }
-        [Required]
+        [Key]
         public int X { get; set; }
-        [Required]
+        [Key]
         public int Y { get; set; }
+        [Key]
+        public TilesViewContainer Container { get; set; }
         [Required]
         public int Width { get; set; }
         [Required]

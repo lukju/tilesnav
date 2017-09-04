@@ -10,13 +10,13 @@ namespace TilesNav.Core
     {
         readonly ITilesNavRepository<PersonalTilesView, int> _personalViewsRepo;
         readonly ITilesNavRepository<DefaultTilesView, int> _defaultViewsRepo;
-        readonly IUser _currentUser;
+        readonly User _currentUser;
 
-        public TilesViewManager(IUser currentUser, ITilesNavRepository<PersonalTilesView, int> personalViewsRepo, ITilesNavRepository<DefaultTilesView, int> defaultViewsRepo)
+        public TilesViewManager(IUserManager userManager, ITilesNavRepository<PersonalTilesView, int> personalViewsRepo, ITilesNavRepository<DefaultTilesView, int> defaultViewsRepo)
         {
             _personalViewsRepo = personalViewsRepo;
             _defaultViewsRepo = defaultViewsRepo;
-            _currentUser = currentUser;
+            _currentUser = userManager.CurrentUser;
         }
         public void DeletePersonalView(int id)
         {
@@ -45,7 +45,7 @@ namespace TilesNav.Core
         public TilesView LoadPersonalView(string viewerName, bool fallbackToDefaultView = true)
         {
             TilesView tilesView = _personalViewsRepo.GetAll(
-                q => q.Owner == _currentUser.AccountName && q.Viewer == viewerName).FirstOrDefault();
+                q => q.Owner.AccountName == _currentUser.AccountName && q.Viewer == viewerName).FirstOrDefault();
             if (tilesView == null)
             {
                 tilesView = LoadDefaultView(viewerName);
@@ -86,13 +86,13 @@ namespace TilesNav.Core
             {
                 throw new InvalidOperationException("view for this viewer already exists.");
             }
-            view.Owner = _currentUser.AccountName;
+            view.Owner = _currentUser;
             return _personalViewsRepo.Create(view);
         }
 
         private PersonalTilesView UpdatePersonalView(PersonalTilesView view)
         {
-            if (view.Owner != _currentUser.AccountName)
+            if (view.Owner == null || view.Owner.AccountName != _currentUser.AccountName)
             {
                 throw new InvalidOperationException("view does not belong to currentuser.");
             }

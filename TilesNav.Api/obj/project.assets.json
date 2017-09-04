@@ -3430,19 +3430,6 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "TilesNav.Api.Composition/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TilesNav.Api.Composition.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TilesNav.Api.Composition.dll": {}
-        }
-      },
       "TilesNav.Core.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -9488,11 +9475,6 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
-    "TilesNav.Api.Composition/1.0.0": {
-      "type": "project",
-      "path": "../TilesNav.Api.Composition/TilesNav.Api.Composition.csproj",
-      "msbuildProject": "../TilesNav.Api.Composition/TilesNav.Api.Composition.csproj"
-    },
     "TilesNav.Core.Interfaces/1.0.0": {
       "type": "project",
       "path": "../TilesNav.Core.Interfaces/TilesNav.Core.Interfaces.csproj",
@@ -9514,7 +9496,6 @@
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
-      "TilesNav.Api.Composition >= 1.0.0",
       "TilesNav.Core.Interfaces >= 1.0.0",
       "TilesNav.Model >= 1.0.0"
     ]
@@ -9552,9 +9533,6 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "G:\\DEV\\tilesnav\\TilesNav.Api.Composition\\TilesNav.Api.Composition.csproj": {
-              "projectPath": "G:\\DEV\\tilesnav\\TilesNav.Api.Composition\\TilesNav.Api.Composition.csproj"
-            },
             "G:\\DEV\\tilesnav\\TilesNav.Model\\TilesNav.Model.csproj": {
               "projectPath": "G:\\DEV\\tilesnav\\TilesNav.Model\\TilesNav.Model.csproj"
             },

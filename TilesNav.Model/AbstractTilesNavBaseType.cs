@@ -4,10 +4,15 @@ using System.Text;
 
 namespace TilesNav.Model
 {
-    public abstract class AbstractTilesNavBaseType<T_ID>
+    public abstract class AbstractTilesNavBaseType<TKey>
     {
-        public T_ID ID { get; set; }
+        public TKey ID { get; set; }
 
         public DateTime Modified { get; set; }
+        
+        public DateTime Created { get; set; }
+
+        public User CreatedBy { get; set; }
+        public User ModifiedBy { get; set; }
     }
 }

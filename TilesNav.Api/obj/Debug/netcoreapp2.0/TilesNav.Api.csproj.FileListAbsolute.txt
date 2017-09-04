@@ -19,3 +19,5 @@ G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interf
 G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Api.Composition.pdb
 G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb
 G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Persistence.Interfaces.pdb
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.dll
+G:\DEV\tilesnav\TilesNav.Api\bin\Debug\netcoreapp2.0\TilesNav.Core.pdb

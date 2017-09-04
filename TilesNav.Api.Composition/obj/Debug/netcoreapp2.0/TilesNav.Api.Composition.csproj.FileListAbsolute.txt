@@ -13,3 +13,7 @@ G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Persis
 G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.csprojResolveAssemblyReference.cache
 G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.dll
 G:\DEV\tilesnav\TilesNav.Api.Composition\obj\Debug\netcoreapp2.0\TilesNav.Api.Composition.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Core.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.dll
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Core.pdb
+G:\DEV\tilesnav\TilesNav.Api.Composition\bin\Debug\netcoreapp2.0\TilesNav.Core.Interfaces.pdb

@@ -31,9 +31,9 @@
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
-          "TilesNav.Api.Composition": "1.0.0",
           "TilesNav.Core.Interfaces": "1.0.0",
-          "TilesNav.Model": "1.0.0"
+          "TilesNav.Model": "1.0.0",
+          "TilesNav.Api.Composition": "1.0.0.0"
         },
         "runtime": {
           "TilesNav.Api.dll": {}
@@ -2652,17 +2652,6 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "TilesNav.Api.Composition/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
-        },
-        "runtime": {
-          "TilesNav.Api.Composition.dll": {}
-        },
-        "compile": {
-          "TilesNav.Api.Composition.dll": {}
-        }
-      },
       "TilesNav.Core.Interfaces/1.0.0": {
         "dependencies": {
           "TilesNav.Model": "1.0.0"
@@ -2683,6 +2672,14 @@
         },
         "compile": {
           "TilesNav.Model.dll": {}
+        }
+      },
+      "TilesNav.Api.Composition/1.0.0.0": {
+        "runtime": {
+          "TilesNav.Api.Composition.dll": {}
+        },
+        "compile": {
+          "TilesNav.Api.Composition.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -4332,11 +4329,6 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "TilesNav.Api.Composition/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "TilesNav.Core.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4344,6 +4336,11 @@
     },
     "TilesNav.Model/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TilesNav.Api.Composition/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

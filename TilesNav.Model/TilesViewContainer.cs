@@ -7,18 +7,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TilesNav.Model
 {
-    public class TilesViewContainer: AbstractTilesNavBaseType<int>
+    public class TilesViewContainer
     {
+        [Key]
+        public int Position { get; set; }
+        [Key]
+        public TilesView View { get; set; }
         public string Title { get; set; }
-
-        public string SerializedTiles { get; set; }
-
-        [NotMapped]
-        public List<TilesViewItem> Tiles {
-            get
-            {
-                return JsonConvert.DeserializeObject<List<TilesViewItem>>(SerializedTiles);
-            }
-        }
+        public List<TilesViewItem> Tiles { get; set; }
     }
 }

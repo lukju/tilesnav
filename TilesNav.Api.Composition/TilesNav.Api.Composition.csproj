@@ -9,9 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TilesNav.Persistence.SqlServer">
-      <HintPath>..\TilesNav.Persistence.SqlServer\bin\Debug\netcoreapp2.0\TilesNav.Persistence.SqlServer.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\TilesNav.Core\TilesNav.Core.csproj" />
+    <ProjectReference Include="..\TilesNav.Persistence.SqlServer\TilesNav.Persistence.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>
