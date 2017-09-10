@@ -9,9 +9,8 @@ namespace TilesNav.Model
 {
     public class TilesViewContainer
     {
-        [Key]
         public int Position { get; set; }
-        [Key]
+        public int ViewId { get; set; }
         public TilesView View { get; set; }
         public string Title { get; set; }
         public List<TilesViewItem> Tiles { get; set; }

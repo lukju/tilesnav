@@ -18,5 +18,7 @@ namespace TilesNav.Model
         public TileDatasource Datasource { get; set; }
         [Required]
         public TileRenderer Renderer { get; set; }
+
+        protected override bool HasAssignedId => Id != null && Id != Guid.Empty;
     }
 }

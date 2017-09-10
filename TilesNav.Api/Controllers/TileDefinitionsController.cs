@@ -44,7 +44,7 @@ namespace TilesNav.Api.Controllers
                 return BadRequest();
             }
             var newTile = _tilesMgr.SaveDefinition(tile);
-            return CreatedAtRoute(nameof(GetById), new { id = newTile.ID }, newTile);
+            return CreatedAtRoute(nameof(GetById), new { id = newTile.Id }, newTile);
         }
 
         [HttpDelete("{id}")]
@@ -67,7 +67,7 @@ namespace TilesNav.Api.Controllers
             }
             try
             {
-                tile.ID = id;
+                tile.Id = id;
                 var result = _tilesMgr.SaveDefinition(tile);
                 if (result == null)
                 {
@@ -84,7 +84,7 @@ namespace TilesNav.Api.Controllers
         [HttpPut]
         public IActionResult Update([FromBody] TileDefinition tile)
         {
-            return Update(tile.ID, tile);
+            return Update(tile.Id, tile);
         }
     }
 }

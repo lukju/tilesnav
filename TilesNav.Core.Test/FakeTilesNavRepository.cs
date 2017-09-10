@@ -12,10 +12,13 @@ namespace TilesNav.Core.Test
     {
         private readonly List<TEntity> _repo = new List<TEntity>();
 
-        public TEntity Create(TEntity entity)
+        public TEntity Create(TEntity entity, User createdBy)
         {
+            entity.Created = DateTime.Now;
+            entity.CreatedBy = createdBy;
             entity.Modified = DateTime.Now;
-            entity.ID = CreateNewId();
+            entity.ModifiedBy = createdBy;
+            entity.Id = CreateNewId();
             _repo.Add(entity);
             return entity;
         }
@@ -31,7 +34,7 @@ namespace TilesNav.Core.Test
 
         public TEntity Get(TID id)
         {
-            var result = (from t in _repo where t.ID.Equals(id) select t)
+            var result = (from t in _repo where t.Id.Equals(id) select t)
                 .FirstOrDefault();
 
             return result;
@@ -47,10 +50,11 @@ namespace TilesNav.Core.Test
             return entities;
         }
 
-        public TEntity Update(TEntity entity)
+        public TEntity Update(TEntity entity, User modifiedBy)
         {
             entity.Modified = DateTime.Now;
-            Delete(entity.ID);
+            entity.ModifiedBy = modifiedBy;
+            Delete(entity.Id);
             _repo.Add(entity);
             return entity;
         }

@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace TilesNav.Model
 {
     public class User: AbstractTilesNavBaseType<int>
     {
-        private User() { }
-        public User(string accountName)
-        {
-            AccountName = accountName;
-        }
-        public string AccountName { get; private set; }
+        [Required]
+        public string AccountName { get; set; }
+
+        protected override bool HasAssignedId => Id > 0;
     }
 }

@@ -22,7 +22,7 @@ namespace TilesNav.Api.Controllers
 
         protected IActionResult CreateOrUpdate(TilesView tilesView)
         {
-            bool isNew = (tilesView.ID <= 0);
+            bool isNew = (tilesView.Id <= 0);
             if (!ModelState.IsValid)
             {
                 return BadRequest("Invalid payload");
@@ -32,7 +32,7 @@ namespace TilesNav.Api.Controllers
                 var result = _tilesViewManager.SaveView(tilesView);
                 if (isNew)
                 {
-                    return CreatedAtRoute(nameof(Get), new { id = result.ID }, result);
+                    return CreatedAtRoute(nameof(Get), new { id = result.Id }, result);
                 }
                 else
                 {

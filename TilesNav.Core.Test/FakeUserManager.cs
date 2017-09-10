@@ -8,6 +8,6 @@ namespace TilesNav.Core.Test
 {
     class FakeUserManager : IUserManager
     {
-        public User CurrentUser => new User("fake_user");
+        public User CurrentUser => new User() { AccountName = "fake_user" };
     }
 }

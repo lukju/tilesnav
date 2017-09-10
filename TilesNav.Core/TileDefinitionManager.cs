@@ -8,11 +8,15 @@ namespace TilesNav.Core
 {
     public class TileDefinitionManager : ITileDefinitionManager
     {
-        readonly ITilesNavRepository<TileDefinition, Guid> _tileDefinitionRepo;
+        readonly private ITilesNavRepository<TileDefinition, Guid> _tileDefinitionRepo;
+        readonly private User _currentUser;
 
-        public TileDefinitionManager(ITilesNavRepository<TileDefinition, Guid> tileDefinitionRepo)
+        public TileDefinitionManager(
+            ITilesNavRepository<TileDefinition, Guid> tileDefinitionRepo,
+            IUserManager userManager)
         {
             _tileDefinitionRepo = tileDefinitionRepo;
+            _currentUser = userManager.CurrentUser;
         }
 
         public TileDefinition DeleteDefinition(Guid id)
@@ -32,16 +36,16 @@ namespace TilesNav.Core
 
         public TileDefinition SaveDefinition(TileDefinition td)
         {
-            if (td.ID != Guid.Empty)
+            if (td.Id != Guid.Empty)
             {
-                if (GetDefinition(td.ID) == null)
+                if (GetDefinition(td.Id) == null)
                 {
                     throw new InvalidOperationException("definition does not exist");
                 }
-                return _tileDefinitionRepo.Update(td);
+                return _tileDefinitionRepo.Update(td, _currentUser);
             } else
             {
-                return _tileDefinitionRepo.Create(td);
+                return _tileDefinitionRepo.Create(td, _currentUser);
             }
         }
     }

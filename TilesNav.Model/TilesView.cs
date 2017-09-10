@@ -6,7 +6,8 @@ namespace TilesNav.Model
 {
     public abstract class TilesView: AbstractTilesNavBaseType<int>
     {
-        public string Viewer { get; set; }
-        public List<TilesViewContainer> Containers { get; set; }        
+        public TilesNavViewer Viewer { get; set; }
+        public List<TilesViewContainer> Containers { get; set; }
+        protected override bool HasAssignedId => Id > 0;
     }
 }

@@ -14,15 +14,15 @@ namespace TilesNav.Core.Test
             var mgr = TileDefinitionManager;
             var td = new TileDefinition();
             var added = mgr.SaveDefinition(td);
-            Assert.NotEqual(added.ID, Guid.Empty);
-            Assert.NotNull(mgr.GetDefinition(added.ID));
+            Assert.NotEqual(added.Id, Guid.Empty);
+            Assert.NotNull(mgr.GetDefinition(added.Id));
         }
 
         [Fact]
         public void UpdatingOfInexistentDefinitionThrows()
         {
             var mgr = TileDefinitionManager;
-            var td = new TileDefinition() { ID = Guid.NewGuid() };
+            var td = new TileDefinition() { Id = Guid.NewGuid() };
             Assert.Throws<InvalidOperationException>(() => mgr.SaveDefinition(td));
         }
 
@@ -31,7 +31,7 @@ namespace TilesNav.Core.Test
             get
             {
                 var definitionRepo = new FakeTilesNavRepositoryWithGuidId<TileDefinition>();
-                return new TileDefinitionManager(definitionRepo);
+                return new TileDefinitionManager(definitionRepo, new FakeUserManager());
             }
         }
     }

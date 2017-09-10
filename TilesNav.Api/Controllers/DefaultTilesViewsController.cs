@@ -45,14 +45,14 @@ namespace TilesNav.Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] DefaultTilesView tilesView)
         {
-            tilesView.ID = id;
+            tilesView.Id = id;
             return CreateOrUpdate(tilesView);
         }
 
         [HttpPut]
         public IActionResult Update([FromBody] DefaultTilesView tilesView)
         {
-            return Update(tilesView.ID, tilesView);
+            return Update(tilesView.Id, tilesView);
         }
     }
 }

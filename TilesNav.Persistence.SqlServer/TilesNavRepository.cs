@@ -8,7 +8,7 @@ using TilesNav.Persistence.Interfaces;
 
 namespace TilesNav.Persistence.SqlServer
 {
-    class TilesNavRepository<TEntity, TID> : ITilesNavRepository<TEntity, TID> where TEntity: AbstractTilesNavBaseType<TID>
+    class TilesNavRepository<TEntity, TKey> : ITilesNavRepository<TEntity, TKey> where TEntity : AbstractTilesNavBaseType<TKey>
     {
         private readonly TilesContext _ctx;
 
@@ -16,15 +16,18 @@ namespace TilesNav.Persistence.SqlServer
         {
             _ctx = ctx;
         }
-        public TEntity Create(TEntity entity)
+        public TEntity Create(TEntity entity, User createdBy)
         {
+            entity.Created = DateTime.Now;
+            entity.CreatedBy = createdBy;
             entity.Modified = DateTime.Now;
+            entity.ModifiedBy = createdBy;
             EntityEntry<TEntity> added = _ctx.Set<TEntity>().Add(entity);
             _ctx.SaveChanges();
             return added.Entity;
         }
 
-        public TEntity Delete(TID id)
+        public TEntity Delete(TKey id)
         {
             TEntity toDelete = Get(id);
             EntityEntry<TEntity> deleted = _ctx.Remove(toDelete);
@@ -32,11 +35,11 @@ namespace TilesNav.Persistence.SqlServer
             return deleted.Entity;
         }
 
-        public TEntity Get(TID id)
+        public TEntity Get(TKey id)
         {
-            var result = (from t in _ctx.Set<TEntity>() where t.ID.Equals(id) select t)
+            var result = (from t in _ctx.Set<TEntity>() where t.Id.Equals(id) select t)
                 .FirstOrDefault();
-            
+
             return result;
         }
 
@@ -50,9 +53,10 @@ namespace TilesNav.Persistence.SqlServer
             return query;
         }
 
-        public TEntity Update(TEntity entity)
+        public TEntity Update(TEntity entity, User modifiedBy)
         {
             entity.Modified = DateTime.Now;
+            entity.ModifiedBy = modifiedBy;
             EntityEntry<TEntity> updated = _ctx.Update(entity);
             _ctx.SaveChanges();
             return updated.Entity;

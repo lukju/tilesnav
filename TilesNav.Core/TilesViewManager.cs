@@ -8,14 +8,19 @@ namespace TilesNav.Core
 {
     public class TilesViewManager : ITilesViewManager
     {
-        readonly ITilesNavRepository<PersonalTilesView, int> _personalViewsRepo;
-        readonly ITilesNavRepository<DefaultTilesView, int> _defaultViewsRepo;
-        readonly User _currentUser;
+        readonly private ITilesNavRepository<PersonalTilesView, int> _personalViewsRepo;
+        readonly private ITilesNavRepository<DefaultTilesView, int> _defaultViewsRepo;
+        readonly private ITilesNavRepository<TilesNavViewer, string> _viewerRepo;
+        readonly private User _currentUser;
 
-        public TilesViewManager(IUserManager userManager, ITilesNavRepository<PersonalTilesView, int> personalViewsRepo, ITilesNavRepository<DefaultTilesView, int> defaultViewsRepo)
+        public TilesViewManager(IUserManager userManager, 
+            ITilesNavRepository<PersonalTilesView, int> personalViewsRepo, 
+            ITilesNavRepository<DefaultTilesView, int> defaultViewsRepo,
+            ITilesNavRepository<TilesNavViewer, string> viewerRepo)
         {
             _personalViewsRepo = personalViewsRepo;
             _defaultViewsRepo = defaultViewsRepo;
+            _viewerRepo = viewerRepo;
             _currentUser = userManager.CurrentUser;
         }
         public void DeletePersonalView(int id)
@@ -34,21 +39,33 @@ namespace TilesNav.Core
             {
                 throw new Exception("No such TilesView found!");
             }
-        }        
+        }
 
         public TilesView LoadDefaultView(string viewerName)
         {
-            TilesView tilesView = _defaultViewsRepo.GetAll(q => q.Viewer == viewerName).FirstOrDefault();
+            var viewer = _viewerRepo.Get(viewerName);
+            return LoadDefaultView(viewer);
+        }
+
+        public TilesView LoadDefaultView(TilesNavViewer viewer)
+        {
+            TilesView tilesView = _defaultViewsRepo.GetAll(q => q.Viewer.Id == viewer.Id).FirstOrDefault();
             return tilesView;
         }
 
         public TilesView LoadPersonalView(string viewerName, bool fallbackToDefaultView = true)
         {
+            var viewer = _viewerRepo.Get(viewerName);
+            return LoadPersonalView(viewer, fallbackToDefaultView);
+        }
+
+        public TilesView LoadPersonalView(TilesNavViewer viewer, bool fallbackToDefaultView = true)
+        {
             TilesView tilesView = _personalViewsRepo.GetAll(
-                q => q.Owner.AccountName == _currentUser.AccountName && q.Viewer == viewerName).FirstOrDefault();
+                q => q.Owner.AccountName == _currentUser.AccountName && q.Viewer.Id == viewer.Id).FirstOrDefault();
             if (tilesView == null)
             {
-                tilesView = LoadDefaultView(viewerName);
+                tilesView = LoadDefaultView(viewer);
             }
             return tilesView;
         }
@@ -58,7 +75,7 @@ namespace TilesNav.Core
             TilesView savedView = null;
             if (view is PersonalTilesView)
             {
-                if (view.ID > 0)
+                if (view.Id > 0)
                 {
                     savedView = UpdatePersonalView(view as PersonalTilesView);
                 } else
@@ -67,7 +84,7 @@ namespace TilesNav.Core
                 }
             } else
             {
-                if (view.ID > 0)
+                if (view.Id > 0)
                 {
                     savedView = UpdateDefaultView(view as DefaultTilesView);
                 }
@@ -87,7 +104,7 @@ namespace TilesNav.Core
                 throw new InvalidOperationException("view for this viewer already exists.");
             }
             view.Owner = _currentUser;
-            return _personalViewsRepo.Create(view);
+            return _personalViewsRepo.Create(view, _currentUser);
         }
 
         private PersonalTilesView UpdatePersonalView(PersonalTilesView view)
@@ -101,7 +118,7 @@ namespace TilesNav.Core
             {
                 throw new InvalidOperationException("view does not exist.");
             }
-            if (view.ID != existing.ID)
+            if (view.Id != existing.Id)
             {
                 throw new InvalidOperationException("incorrect ID provided.");
             }
@@ -109,22 +126,22 @@ namespace TilesNav.Core
             {
                 throw new InvalidOperationException("incorrect viewer provided.");
             }
-            return _personalViewsRepo.Update(view);
+            return _personalViewsRepo.Update(view, _currentUser);
         }
 
         private DefaultTilesView AddDefaultView(DefaultTilesView view)
         {
-            return _defaultViewsRepo.Create(view);
+            return _defaultViewsRepo.Create(view, _currentUser);
         }
 
         private DefaultTilesView UpdateDefaultView(DefaultTilesView view)
         {
             TilesView existing = LoadDefaultView(view.Viewer);
-            if (existing == null || view.ID != existing.ID)
+            if (existing == null || view.Id != existing.Id)
             {
                 throw new Exception("Could'nt update Personal View because it does not exist.");
             }
-            return _defaultViewsRepo.Update(view);
+            return _defaultViewsRepo.Update(view, _currentUser);
         }
     }
 }

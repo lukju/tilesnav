@@ -7,7 +7,9 @@ namespace TilesNav.Core.Interfaces
 {
     public interface ITilesViewManager
     {
+        TilesView LoadPersonalView(TilesNavViewer viewer, bool fallbackToDefaultView = true);
         TilesView LoadPersonalView(string viewerName, bool fallbackToDefaultView = true);
+        TilesView LoadDefaultView(TilesNavViewer viewer);
         TilesView LoadDefaultView(string viewerName);
 
         TilesView SaveView(TilesView view);
